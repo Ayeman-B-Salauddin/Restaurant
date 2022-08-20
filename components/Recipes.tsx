@@ -13,7 +13,7 @@ import React from "react";
 
 export const Recipes = ({ recipes }) => {
   return (
-    <>
+    <div id="scroll">
       <CssBaseline />
       <Container sx={{ py: 9, backgroundColor: "#202A36" }} maxWidth={false}>
         <Grid container spacing={4}>
@@ -56,6 +56,6 @@ export const Recipes = ({ recipes }) => {
           ))}
         </Grid>
       </Container>
-    </>
+    </div>
   );
 };
