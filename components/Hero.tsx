@@ -1,4 +1,6 @@
 import { Button } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -15,6 +17,15 @@ export const Hero = () => {
           <Button variant="contained" size="large">
             Place Order
           </Button>
+        </div>
+      </div>
+      <div className="fade">
+        <div className="new2">
+          <Link href="#scroll">
+            <a>
+              <ArrowDropDownIcon fontSize="large" />
+            </a>
+          </Link>
         </div>
       </div>
     </section>
