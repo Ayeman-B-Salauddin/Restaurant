@@ -16,7 +16,9 @@ const theme = createTheme({
 
 export async function getStaticProps() {
   const client = createClient({
+    //@ts-ignore
     space: process.env.CONTENTFUL_SPACE_ID,
+    //@ts-ignore
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
@@ -34,7 +36,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ recipes }: any) => {
-  console.log(recipes);
   return (
     <ThemeProvider theme={theme}>
       <Hero />
