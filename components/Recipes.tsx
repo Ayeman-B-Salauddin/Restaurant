@@ -2,7 +2,6 @@ import {
   Container,
   Grid,
   Card,
-  CardMedia,
   Typography,
   CardContent,
   CardActions,
@@ -14,7 +13,6 @@ import React from "react";
 import Swal from "sweetalert2";
 
 export const Recipes = ({ recipes }: any) => {
-  console.log(recipes);
   const handleClick = () => {
     Swal.fire({
       title: "Do you want to order now?",

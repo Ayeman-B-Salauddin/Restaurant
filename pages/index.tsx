@@ -2,6 +2,7 @@ import { Hero } from "../components/Hero";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { createClient } from "contentful";
 import { Recipes } from "../components/Recipes";
+import { Footer } from "../components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -40,6 +41,7 @@ const Home = ({ recipes }: any) => {
     <ThemeProvider theme={theme}>
       <Hero />
       <Recipes recipes={recipes} />
+      <Footer />
     </ThemeProvider>
   );
 };
