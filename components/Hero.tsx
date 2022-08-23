@@ -14,8 +14,8 @@ export const Hero = () => {
             <h1>Hungry?</h1>
             <h2>Try out a double-cheese beef burger </h2>
             <p>
-              Ready in 60 seconds, place your order and we'll be on your
-              doorstep within 10 minutes.
+              Ready in 60 seconds, place your order right now and get 10% off.
+              Hurry up, this voucher may not be valid tomorrow.
             </p>
             <br />
             <Link href="#scroll">
