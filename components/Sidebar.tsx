@@ -11,18 +11,12 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import Swal from "sweetalert2";
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    Swal.fire("You need to sign up first!");
-  };
-
   const closer = () => {
     setIsOpen(false);
-    Swal.close();
   };
 
   return (
@@ -53,7 +47,7 @@ export const Sidebar = () => {
             {["Full Menu", "Orders", "History", "Voucher", "Address"].map(
               (text) => (
                 <ListItem key={text} disablePadding>
-                  <ListItemButton onClick={handleClick}>
+                  <ListItemButton>
                     <ListItemText primary={text} />
                   </ListItemButton>
                 </ListItem>
