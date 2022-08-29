@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { createClient } from "contentful";
 import { Recipes } from "../components/Recipes";
 import { Footer } from "../components/Footer";
+import Head from "next/head";
 
 const theme = createTheme({
   palette: {
@@ -38,11 +39,21 @@ export async function getStaticProps() {
 
 const Home = ({ recipes }: any) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Hero />
-      <Recipes recipes={recipes} />
-      <Footer />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Restaurant</title>
+        <meta name="description" content="Foods, flavors, and more" />
+        <link
+          rel="icon"
+          href="https://img.icons8.com/bubbles/50/000000/restaurant.png"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Hero />
+        <Recipes recipes={recipes} />
+        <Footer />
+      </ThemeProvider>
+    </>
   );
 };
 
